@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des cours</title>
+</head>
+<body>
+    <h1>Liste des cours</h1>
+
+    <a href="{% url 'ajouter_cours' %}">Ajouter un cours</a>
+
+    <ul>
+        {% for c in cours %}
+            <li>
+                {{ c.titre }} - {{ c.enseignant }} - Crédit : {{ c.credit }}
+                <a href="{% url 'modifier_cours' c.id %}">Modifier</a>
+                <a href="{% url 'supprimer_cours' c.id %}">Supprimer</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

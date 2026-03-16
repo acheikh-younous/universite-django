@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accueil</title>
+</head>
+<body>
+    <h1>Bienvenue dans l'application Université</h1>
+
+    {% if user.is_authenticated %}
+        <p>Bonjour {{ user.username }}, vous êtes connecté.</p>
+        <a href="{% url 'liste_cours' %}">Voir les cours</a><br>
+        <a href="{% url 'deconnexion' %}">Se déconnecter</a>
+    {% else %}
+        <p>Vous n'êtes pas connecté.</p>
+        <a href="{% url 'connexion' %}">Se connecter</a>
+    {% endif %}
+</body>
+</html>

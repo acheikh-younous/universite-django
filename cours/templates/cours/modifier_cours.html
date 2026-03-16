@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Modifier un cours</title>
+</head>
+<body>
+ <h1>Modifier un cours</h1>
+ <form method="POST">
+ {% csrf_token %}
+ {{ form.as_p }}
+ <button type="submit">Modifier</button>
+ </form>
+ <br>
+ <a href="{% url 'liste_cours' %}">Retour à la liste des cours</a>
+</body>
+</html>
