@@ -18,6 +18,7 @@ def modifier_cours(request, id):
         form = CoursForm(instance=cours)
     return render(request, 'cours/modifier_cours.html', {'form': form})
 
+#Ajouter cours
 @login_required
 def ajouter_cours(request):
     form = CoursForm()

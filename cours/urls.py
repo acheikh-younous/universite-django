@@ -1,5 +1,5 @@
 from django.urls import path
-from ..views import liste_cours, acceuil, ajouter_cours, modifier_cours, supprimer_cours, connexion_utilisateur, deconnexion_utilisateur
+from .views import liste_cours, acceuil, ajouter_cours, modifier_cours, supprimer_cours, connexion_utilisateur, deconnexion_utilisateur
 urlpatterns = [
     path('', acceuil, name='accueil'),
     path('cours/', liste_cours, name='liste_cours'),
